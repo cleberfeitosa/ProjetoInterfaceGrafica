@@ -28,7 +28,10 @@ public class Exemplo8_2 extends javax.swing.JFrame {
 
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        jMenu2 = new javax.swing.JMenu();
+        jMnExemplos = new javax.swing.JMenu();
+        jItmMnExemplo3 = new javax.swing.JMenuItem();
+        jItmMnExemplo4 = new javax.swing.JMenuItem();
+        jItmMn5 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -36,9 +39,38 @@ public class Exemplo8_2 extends javax.swing.JFrame {
         jMenu1.setText("Arquivo");
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setMnemonic('e');
-        jMenu2.setText("Exemplos");
-        jMenuBar1.add(jMenu2);
+        jMnExemplos.setMnemonic('e');
+        jMnExemplos.setText("Exemplos");
+
+        jItmMnExemplo3.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_3, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jItmMnExemplo3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/java.png"))); // NOI18N
+        jItmMnExemplo3.setText("Exemplo 8.3");
+        jItmMnExemplo3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jItmMnExemplo3ActionPerformed(evt);
+            }
+        });
+        jMnExemplos.add(jItmMnExemplo3);
+
+        jItmMnExemplo4.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_4, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jItmMnExemplo4.setText("Exemplo 8.4");
+        jItmMnExemplo4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jItmMnExemplo4ActionPerformed(evt);
+            }
+        });
+        jMnExemplos.add(jItmMnExemplo4);
+
+        jItmMn5.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_5, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jItmMn5.setText("Exemplo 8.5");
+        jItmMn5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jItmMn5ActionPerformed(evt);
+            }
+        });
+        jMnExemplos.add(jItmMn5);
+
+        jMenuBar1.add(jMnExemplos);
 
         setJMenuBar(jMenuBar1);
 
@@ -56,6 +88,21 @@ public class Exemplo8_2 extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jItmMnExemplo3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jItmMnExemplo3ActionPerformed
+        Exemplo8_3 exemplo3 = new Exemplo8_3();
+        exemplo3.setVisible(true);
+    }//GEN-LAST:event_jItmMnExemplo3ActionPerformed
+
+    private void jItmMnExemplo4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jItmMnExemplo4ActionPerformed
+        Exemplo8_4 exemplo4 = new Exemplo8_4();
+        exemplo4.setVisible(true);
+    }//GEN-LAST:event_jItmMnExemplo4ActionPerformed
+
+    private void jItmMn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jItmMn5ActionPerformed
+        Exemplo8_5 exemplo5 = new Exemplo8_5();
+        exemplo5.setVisible(true);
+    }//GEN-LAST:event_jItmMn5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -93,8 +140,11 @@ public class Exemplo8_2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem jItmMn5;
+    private javax.swing.JMenuItem jItmMnExemplo3;
+    private javax.swing.JMenuItem jItmMnExemplo4;
     private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenu jMnExemplos;
     // End of variables declaration//GEN-END:variables
 }

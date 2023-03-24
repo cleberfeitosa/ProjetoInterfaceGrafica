@@ -4,6 +4,7 @@
  */
 package Exemplo8;
 
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 /**
@@ -29,10 +30,12 @@ public class Exemplo8_9 extends javax.swing.JFrame {
     private void initComponents() {
 
         jCbxEstados = new javax.swing.JComboBox<>();
+        jLblPais = new javax.swing.JLabel();
+        jLblMensagem = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jCbxEstados.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mato Grosso", "Mato Grosso do Sul", "Goiás", "São Paulo" }));
+        jCbxEstados.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Bolívia", "Brasil", "Paraguai" }));
         jCbxEstados.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCbxEstadosActionPerformed(evt);
@@ -44,23 +47,42 @@ public class Exemplo8_9 extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(124, 124, 124)
-                .addComponent(jCbxEstados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(145, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(124, 124, 124)
+                        .addComponent(jCbxEstados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLblPais)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLblMensagem)))
+                .addGap(202, 202, 202))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(64, 64, 64)
                 .addComponent(jCbxEstados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(214, Short.MAX_VALUE))
+                .addGap(75, 75, 75)
+                .addComponent(jLblPais)
+                .addGap(18, 18, 18)
+                .addComponent(jLblMensagem)
+                .addContainerGap(121, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jCbxEstadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCbxEstadosActionPerformed
-        JOptionPane.showMessageDialog(null, "ìndice Selecionado: "+ jCbxEstados.getSelectedIndex()+"\nEstado Selecionado: "+jCbxEstados.getSelectedItem());
+        //JOptionPane.showMessageDialog(null, "Índice Selecionado: "+ jCbxEstados.getSelectedIndex()+"\nEstado Selecionado: "+jCbxEstados.getSelectedItem());
+        if(jCbxEstados.getSelectedIndex()==0){
+            jLblPais.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/bolivia.png")));
+        }else if(jCbxEstados.getSelectedIndex()==1){
+            jLblPais.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/brazil.png")));
+        }else if(jCbxEstados.getSelectedIndex()==2){
+            jLblPais.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/paraguay.png")));
+        }
+        jLblMensagem.setText("Índice Selecionado: "+jCbxEstados.getSelectedIndex()+"  País Selecionado: "+jCbxEstados.getSelectedItem());
     }//GEN-LAST:event_jCbxEstadosActionPerformed
 
     /**
@@ -100,5 +122,7 @@ public class Exemplo8_9 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> jCbxEstados;
+    private javax.swing.JLabel jLblMensagem;
+    private javax.swing.JLabel jLblPais;
     // End of variables declaration//GEN-END:variables
 }

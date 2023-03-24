@@ -23,10 +23,20 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="124" max="-2" attributes="0"/>
-              <Component id="jCbxEstados" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="145" max="32767" attributes="0"/>
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="124" max="-2" attributes="0"/>
+                      <Component id="jCbxEstados" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="jLblPais" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLblMensagem" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace min="-2" pref="202" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -35,7 +45,11 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
               <Component id="jCbxEstados" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="214" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
+              <Component id="jLblPais" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="jLblMensagem" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="121" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -44,11 +58,10 @@
     <Component class="javax.swing.JComboBox" name="jCbxEstados">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
-            <StringItem index="0" value="Mato Grosso"/>
-            <StringItem index="1" value="Mato Grosso do Sul"/>
-            <StringItem index="2" value="Goi&#xe1;s"/>
-            <StringItem index="3" value="S&#xe3;o Paulo"/>
+          <StringArray count="3">
+            <StringItem index="0" value="Bol&#xed;via"/>
+            <StringItem index="1" value="Brasil"/>
+            <StringItem index="2" value="Paraguai"/>
           </StringArray>
         </Property>
       </Properties>
@@ -58,6 +71,10 @@
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLblPais">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLblMensagem">
     </Component>
   </SubComponents>
 </Form>
